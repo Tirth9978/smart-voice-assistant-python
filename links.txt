@@ -1,5 +1,10 @@
 google:https://www.google.com/,Opening Google
 youtube:https://www.youtube.com/,Opening You Tube
+translate:https://translate.google.com/,Opening Google translate
 github:https://github.com/,Opening github
 chat gpt:https://chatgpt.com/,Opening Chat GPT
 gmail:https://mail.google.com/mail/u/0/,Opening Gmail
+linkedin:https://www.linkedin.com/feed/,Opening linkedin
+lead code:https://leetcode.com/problemset/,Opening LeetCode
+code forces:https://codeforces.com/,Opening codeforces
+spotify:https://open.spotify.com/,Opening spotify
