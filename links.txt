@@ -1,0 +1,5 @@
+google:https://www.google.com/,Opening Google
+youtube:https://www.youtube.com/,Opening You Tube
+github:https://github.com/,Opening github
+chat gpt:https://chatgpt.com/,Opening Chat GPT
+gmail:https://mail.google.com/mail/u/0/,Opening Gmail
