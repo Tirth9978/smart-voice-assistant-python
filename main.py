@@ -2,11 +2,25 @@ import speech_recognition as sr
 import pyttsx3 as pt
 import webbrowser
 import os
-import time
+import time as tm
+from time import gmtime,strftime
 
 def intro():
+     s =int(strftime("%H"))
+     str = ""
+     if (s >= 6 and s < 12):
+          # print("Good Morning Sir , How can I help you today")
+          str = "Good Morning Sir , How can I help you today"
+     elif (s > 11 and s <= 5):
+          # print("Good Afternoon Sir , How can I help you today")
+          str = "Good Afternoon Sir , How can I help you today"
+     elif(s > 5 and s < 10):
+          # print("Good Evening Sir , How can I help you today")
+          str = "Good Evening Sir , How can I help you today"
+     else :
+          str = "Good Night Sir , How can I help you at last"
      a = pt.init()
-     a.say("Hello Sir, How can I help you")
+     a.say(str)
      a.runAndWait() 
 
 def speek(str):
@@ -61,6 +75,5 @@ def main():
      # print(str)
      processing(str)
      processing_1(str)
-
-
+     
 main()
