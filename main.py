@@ -11,10 +11,10 @@ def intro():
      if (s >= 6 and s < 12):
           # print("Good Morning Sir , How can I help you today")
           str = "Good Morning Sir , How can I help you today"
-     elif (s > 11 and s <= 5):
+     elif (s > 11 and s <= 17):
           # print("Good Afternoon Sir , How can I help you today")
           str = "Good Afternoon Sir , How can I help you today"
-     elif(s > 5 and s < 10):
+     elif(s > 17 and s < 22):
           # print("Good Evening Sir , How can I help you today")
           str = "Good Evening Sir , How can I help you today"
      else :
