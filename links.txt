@@ -8,3 +8,8 @@ linkedin:https://www.linkedin.com/feed/,Opening linkedin
 lead code:https://leetcode.com/problemset/,Opening LeetCode
 code forces:https://codeforces.com/,Opening codeforces
 spotify:https://open.spotify.com/,Opening spotify
+drive:https://drive.google.com/,Opening Drive
+map:https://maps.google.com,Opening Google Maps
+news:https://news.google.com/,Opening Google Maps
+meet:https://meet.google.com/,Opening Google Meet
+gemini:https://gemini.google.com/,Opening Gemini which is before known as Bard
