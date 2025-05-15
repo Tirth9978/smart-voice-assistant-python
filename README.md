@@ -30,7 +30,11 @@ The assistant listens to your voice, processes the command using **speech recogn
 
 ```plaintext
 📦 smart-voice-assistant-python
+
+├── trigger.py               # It is just trigger file for main.py
+├── trigger.bat              # Trigger file for trigger.py
 ├── main.py                  # Main Python script for assistant
+├── main.bat                 # Bat file of main.py
 ├── links.txt                # Key-value pairs of site names and URLs
 ├── Local Folders.txt        # Folder commands and their system paths
 └── README.md                # Project documentation
