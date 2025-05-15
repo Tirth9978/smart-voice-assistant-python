@@ -29,29 +29,6 @@ def speek(str):
      a.runAndWait()
      return 
 
-def recorsition():
-     # Initialize recognizer
-     r = sr.Recognizer()
-     text = ""
-     # Use microphone as source
-     with sr.Microphone() as source:
-     
-          audio = r.listen(source)
-
-          try:
-               # Convert speech to text
-               text = r.recognize_google(audio)
-               # print("You said:", text)
-
-               # Store in variable
-               spoken_text = text
-
-          except sr.UnknownValueError:
-               print("Sorry, I couldn't understand.")
-          except sr.RequestError as e:
-               print("Request failed; check internet connection.")
-     return text.lower()
-
 def processing(str):
      with open("links.txt","r") as file:
           for line in file:
@@ -68,12 +45,43 @@ def processing_1(str):
                     speek(line[line.find(";")+1:])
                     os.startfile(line[line.find(":")+1:line.find(";")])
 
+
+def recorsition():
+     # Initialize recognizer
+     recognizer = sr.Recognizer()
+     command=""
+     with sr.Microphone() as source:
+          print("Listening....")
+          while True:
+               try:
+                    audio = recognizer.listen(source)
+                    command = recognizer.recognize_google(audio).lower()
+                    command.lower()
+                    print(f"You said: {command}")
+                    processing(command)
+                    processing_1(command)
+                    # str = recorsition()
+                    # str = str.lower()
+                    if (command.find("thank you") != -1):
+                         speek("Most Welcome sir ,I am very happy to help you")
+                         return
+     
+                    # print("Trigger detected! Launching assistant...")
+                    # os.startfile("main.bat")  # Or use the full path if needed
+                    # tm.sleep(10)  # Delay to avoid repeated triggers
+               
+               except sr.UnknownValueError:
+                    pass  # Ignore unknown audio
+               except sr.RequestError:
+                    print("Check your internet connection.")
+               except Exception as e:
+                    print(f"Error: {e}")
+
 def main():
      intro()
-     str = recorsition()
+     recorsition()
      # speek(str)
      # print(str)
-     processing(str)
-     processing_1(str)
      
+
 main()
